@@ -3,15 +3,12 @@
 #include <QFile>
 #include <QMdiSubWindow>
 
-///
 MdiArea::MdiArea(QWidget* parent) : QMdiArea{parent} {}
 
-///
+// Add widget as QMdiSubWindow
 QMdiSubWindow* MdiArea::addSubWindow(QWidget* widget,
                                      Qt::WindowFlags windowFlags) {
-  auto retval{findSubWindowByObjectName(widget)};
-  if (retval) return retval;
-  retval = QMdiArea::addSubWindow(widget, windowFlags);
+  auto retval{QMdiArea::addSubWindow(widget, windowFlags)};
   retval->setObjectName(widget->objectName());
   removeQtIcon(retval);
   retval->show();
@@ -19,17 +16,7 @@ QMdiSubWindow* MdiArea::addSubWindow(QWidget* widget,
   return retval;
 }
 
-///
-QMdiSubWindow* MdiArea::findSubWindowByObjectName(QWidget* widget) {
-  auto const sub_window_list{subWindowList()};
-  auto found{
-    std::ranges::find_if(sub_window_list, [&widget](QMdiSubWindow* sub_window) {
-      return sub_window->objectName() == widget->objectName();
-    })};
-  return found != sub_window_list.end() ? *found : nullptr;
-}
-
-///
+// Remove ugly green Qt logo from QMdiSubWindow
 void MdiArea::removeQtIcon(QWidget* widget) {
   QPixmap pixmap{32, 32};
   pixmap.fill(Qt::transparent);

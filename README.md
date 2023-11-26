@@ -2,7 +2,7 @@
 
 <img src="data/images/logo.png" width="15%" align="right"/>
 
-QtBreeze is a CMake wrapper for [breeze-icons](https://github.com/KDE/breeze-icons) and [BreezeStyleSheets](https://github.com/Alexhuszagh/BreezeStyleSheets). It combines both repositories into two seperate [Qt resource files](https://doc.qt.io/qt-5/resources.html#resource-collection-files-op-op-qrc).
+QtBreeze is a CMake wrapper for KDE's [breeze-icons](https://github.com/KDE/breeze-icons) and [BreezeStyleSheets](https://github.com/Alexhuszagh/BreezeStyleSheets). It combines both repositories into two seperate [Qt resource files](https://doc.qt.io/qt-5/resources.html#resource-collection-files-op-op-qrc), which can then be easily included in other Qt projects.
 
 <details>
   <summary>Table of contents</summary>
@@ -42,8 +42,10 @@ target_link_libraries(YourTarget PRIVATE QtBreeze::Icons QtBreeze::StyleSheets)
 If the build is running as a top-level CMake project then a small example will be generated.
 ```sh
 cmake -Bbuild
-cmake --build build --target QtBreezeExamples
+cmake --build build --target QtBreezeImageViewer
 ```
+
+![alt_text](data/images/image_viewer.png)
 
 ## Usage
 In Qt resources in a library must be force initialized by calling the [Q_INIT_RESOURCE()](https://doc.qt.io/qt-5/qdir.html#Q_INIT_RESOURCE) macro with the base name of the .qrc file. As mentioned before icons and stylesheets come as seperate resource files. Those resource files are:

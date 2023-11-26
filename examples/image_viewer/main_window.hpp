@@ -3,7 +3,6 @@
 #include <QMainWindow>
 #include <QMenuBar>
 #include <QToolBar>
-#include <memory>
 #include "mdi_area.hpp"
 
 class MainWindow : public QMainWindow {
@@ -14,13 +13,12 @@ public:
 
 private slots:
   void open();
-  void close();
   void about();
 
 private:
   QToolBar* _file_toolbar{addToolBar(tr("File"))};
+  QToolBar* _about_toolbar{addToolBar(tr("About"))};
   QMenu* _file_menu{menuBar()->addMenu(tr("&File"))};
   QMenu* _about_menu{menuBar()->addMenu(tr("&About"))};
-
-  MdiArea* mdi_area_{new MdiArea{this}};
+  MdiArea* _mdi_area{new MdiArea{this}};
 };

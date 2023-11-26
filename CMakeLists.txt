@@ -14,10 +14,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 macro(find_qt6)
-  find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+  find_package(Qt6 REQUIRED COMPONENTS Core)
 endmacro()
 macro(find_qt5)
-  find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
+  find_package(Qt5 REQUIRED COMPONENTS Core)
 endmacro()
 
 if(Qt6_FOUND)
@@ -31,7 +31,7 @@ elseif(NOT Qt6_FOUND AND NOT Qt5_FOUND)
   endif()
 endif()
 
-cpmaddpackage("gh:KDE/breeze-icons@5.102.0")
+cpmaddpackage("gh:KDE/breeze-icons@${PROJECT_VERSION}")
 cpmaddpackage(
   "gh:Alexhuszagh/BreezeStyleSheets#69d2e7476428216e66143ff7b5c99553d7a2784f")
 
@@ -65,7 +65,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     DOWNLOAD
     https://raw.githubusercontent.com/ZIMO-Elektronik/.clang-format/master/.clang-format
     ${CMAKE_CURRENT_LIST_DIR}/.clang-format)
-  # file(GLOB_RECURSE SRC include/*.*pp tests/*.*pp)
-  # add_clang_format_target(ULF_DCC_EINFormat OPTIONS -i FILES ${SRC})
+  file(GLOB_RECURSE SRC examples/*.*pp)
+  add_clang_format_target(QtBreezeFormat OPTIONS -i FILES ${SRC})
   add_subdirectory(examples)
 endif()

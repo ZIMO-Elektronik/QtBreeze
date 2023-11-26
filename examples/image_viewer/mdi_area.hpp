@@ -11,6 +11,5 @@ public:
                               Qt::WindowFlags windowFlags = Qt::WindowFlags());
 
 private:
-  QMdiSubWindow* findSubWindowByObjectName(QWidget* widget);
   void removeQtIcon(QWidget* widget);
 };

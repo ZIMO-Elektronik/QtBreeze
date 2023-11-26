@@ -1,4 +1,4 @@
-Add GitHub action once ubuntu runners [ECM](https://answers.launchpad.net/ubuntu/jammy/amd64/extra-cmake-modules) gets updated to at least 5.102.0
+Add GitHub action once ubuntu runners [ECM](https://answers.launchpad.net/ubuntu/jammy/amd64/extra-cmake-modules) gets updated to at least 5.102.0 (currently 5.92.0).
 
 ```yml
 name: build
@@ -8,7 +8,7 @@ on:
     branches: [master]
 
 jobs:
-  gcc:
+  x86_64-linux-gnu-gcc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

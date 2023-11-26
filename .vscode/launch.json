@@ -2,10 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug QtBreezeExamples",
+      "name": "Debug QtBreezeImageViewer",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/examples/QtBreezeExamples",
+      "program": "${workspaceFolder}/build/examples/image_viewer/QtBreezeImageViewer",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
