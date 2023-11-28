@@ -48,7 +48,7 @@ cmake --build build --target QtBreezeImageViewer
 ![alt_text](data/images/image_viewer.png)
 
 ## Usage
-In Qt resources in a library must be force initialized by calling the [Q_INIT_RESOURCE()](https://doc.qt.io/qt-5/qdir.html#Q_INIT_RESOURCE) macro with the base name of the .qrc file. As mentioned before icons and stylesheets come as seperate resource files. Those resource files are:
+Qt resources in a library must be force initialized by calling the [Q_INIT_RESOURCE()](https://doc.qt.io/qt-5/qdir.html#Q_INIT_RESOURCE) macro with the base name of the .qrc file. As mentioned before icons and stylesheets come as seperate resource files. Those resource files are:
 - qtbreeze_icons.qrc
 - qtbreeze_stylesheets.qrc
 
