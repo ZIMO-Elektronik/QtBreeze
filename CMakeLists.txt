@@ -21,7 +21,7 @@ cpmaddpackage(
 
 set(SRC ${breeze-icons_SOURCE_DIR}/qtbreeze_icons.qrc)
 add_library(QtBreezeIcons ${SRC})
-add_library(QtBreeze::Icons ALIAS QtBreezeIcons)
+add_library(Qt::BreezeIcons ALIAS QtBreezeIcons)
 
 # Generate .qrc file for breeze-icons
 file(GLOB_RECURSE ABS_ICONS ${breeze-icons_SOURCE_DIR}/icons/*.svg
@@ -35,7 +35,7 @@ file(APPEND ${SRC} "</qresource>\n</RCC>")
 
 set(SRC ${BreezeStyleSheets_SOURCE_DIR}/dist/qrc/qtbreeze_stylesheets.qrc)
 add_library(QtBreezeStyleSheets ${SRC})
-add_library(QtBreeze::StyleSheets ALIAS QtBreezeStyleSheets)
+add_library(Qt::BreezeStyleSheets ALIAS QtBreezeStyleSheets)
 
 # Generate .rqc file for BreezeStyleSheets (comes with python script)
 find_package(Python COMPONENTS Interpreter)

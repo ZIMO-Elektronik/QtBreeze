@@ -35,7 +35,7 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/ZIMO-Elektronik/QtBreeze
   GIT_TAG v5.102.0)
 
-target_link_libraries(YourTarget PRIVATE QtBreeze::Icons QtBreeze::StyleSheets)
+target_link_libraries(YourTarget PRIVATE Qt::BreezeIcons Qt::BreezeStyleSheets)
 ```
 
 ### Build

@@ -16,5 +16,5 @@ jobs:
       - run: sudo apt install extra-cmake-modules
       - run: sudo apt install qt6-base-dev
       - run: cmake -Bbuild
-      - run: cmake --build build --target MDU
+      - run: cmake --build build
 ```cpp

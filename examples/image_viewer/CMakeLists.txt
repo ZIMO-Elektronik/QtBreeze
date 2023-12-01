@@ -12,5 +12,5 @@ elseif(Qt5_FOUND)
 endif()
 
 target_link_libraries(
-  QtBreezeImageViewer PRIVATE QtBreeze::Icons QtBreeze::StyleSheets Qt::Core
+  QtBreezeImageViewer PRIVATE Qt::BreezeIcons Qt::BreezeStyleSheets Qt::Core
                               Qt::Widgets)
