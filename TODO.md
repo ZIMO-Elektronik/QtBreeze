@@ -11,8 +11,9 @@ jobs:
   x86_64-linux-gnu-gcc:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: git fetch --unshallow --tags
+      - uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
       - run: sudo apt install extra-cmake-modules
       - run: sudo apt install qt6-base-dev
       - run: cmake -Bbuild

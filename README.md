@@ -31,7 +31,7 @@ cpmaddpackage("gh:ZIMO-Elektronik/QtBreeze@5.102.0")
 
 # or the FetchContent module
 FetchContent_Declare(
-  DCC
+  QtBreeze
   GIT_REPOSITORY https://github.com/ZIMO-Elektronik/QtBreeze
   GIT_TAG v5.102.0)
 
