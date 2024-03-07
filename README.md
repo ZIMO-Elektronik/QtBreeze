@@ -1,5 +1,7 @@
 # QtBreeze
 
+[![build](https://github.com/ZIMO-Elektronik/QtBreeze/actions/workflows/build.yml/badge.svg)](https://github.com/ZIMO-Elektronik/QtBreeze/actions/workflows/build.yml)
+
 <img src="data/images/logo.png" width="15%" align="right"/>
 
 QtBreeze is a CMake wrapper for KDE's [breeze-icons](https://github.com/KDE/breeze-icons) and [BreezeStyleSheets](https://github.com/Alexhuszagh/BreezeStyleSheets). It combines both repositories into two seperate [Qt resource files](https://doc.qt.io/qt-5/resources.html#resource-collection-files-op-op-qrc), which can then be easily included in other Qt projects.

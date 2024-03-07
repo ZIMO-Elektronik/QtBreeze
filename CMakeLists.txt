@@ -4,20 +4,36 @@ include(FetchContent)
 FetchContent_Declare(
   CMakeModules
   GIT_REPOSITORY https://github.com/ZIMO-Elektronik/CMakeModules
-  GIT_TAG v0.5.0)
+  GIT_TAG v0.7.0)
 FetchContent_MakeAvailable(CMakeModules)
 
 version_from_git()
 project(QtBreeze VERSION ${VERSION_FROM_GIT})
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 find_qt(REQUIRED COMPONENTS Core)
 
-cpmaddpackage("gh:KDE/breeze-icons@${PROJECT_VERSION}")
 cpmaddpackage(
-  "gh:Alexhuszagh/BreezeStyleSheets#69d2e7476428216e66143ff7b5c99553d7a2784f")
+  NAME
+  breeze-icons
+  GITHUB_REPOSITORY
+  KDE/breeze-icons
+  VERSION
+  ${PROJECT_VERSION}
+  DOWNLOAD_ONLY
+  TRUE)
+cpmaddpackage(
+  NAME
+  BreezeStyleSheets
+  GITHUB_REPOSITORY
+  Alexhuszagh/BreezeStyleSheets
+  GIT_TAG
+  69d2e7476428216e66143ff7b5c99553d7a2784f
+  DOWNLOAD_ONLY
+  TRUE)
 
 set(SRC ${breeze-icons_SOURCE_DIR}/qtbreeze_icons.qrc)
 add_library(QtBreezeIcons ${SRC})
