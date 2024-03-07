@@ -19,5 +19,11 @@
       "isBackground": true,
       "command": "ninja -C build QtBreezeStyleSheets"
     },
+    {
+      "label": "Ninja QtBreezeImageViewer",
+      "type": "shell",
+      "isBackground": true,
+      "command": "ninja -C build QtBreezeImageViewer"
+    },
   ]
 }
