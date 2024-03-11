@@ -54,7 +54,7 @@ add_library(QtBreezeStyleSheets ${SRC})
 add_library(Qt::BreezeStyleSheets ALIAS QtBreezeStyleSheets)
 
 # Generate .rqc file for BreezeStyleSheets (comes with python script)
-find_package(Python COMPONENTS Interpreter)
+find_package(Python REQUIRED COMPONENTS Interpreter)
 execute_process(
   COMMAND ${Python_EXECUTABLE} configure.py --extensions=all --styles=all
           --resource qtbreeze_stylesheets.qrc
