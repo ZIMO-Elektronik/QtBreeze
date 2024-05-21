@@ -34,7 +34,7 @@ cpmaddpackage("gh:ZIMO-Elektronik/QtBreeze@5.102.0")
 # or the FetchContent module
 FetchContent_Declare(
   QtBreeze
-  GIT_REPOSITORY https://github.com/ZIMO-Elektronik/QtBreeze
+  GIT_REPOSITORY "https://github.com/ZIMO-Elektronik/QtBreeze"
   GIT_TAG v5.102.0)
 
 target_link_libraries(YourTarget PRIVATE Qt::BreezeIcons Qt::BreezeStyleSheets)
@@ -70,7 +70,8 @@ QTextStream stream{&file};
 app.setStyleSheet(stream.readAll());
 ```
 
-:warning: Be careful when using BreezeStyleSheets together with the [Qt Advanced Docking System](https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System). The dock managers internal stylesheet has to be disabled for BreezeStyleSheets to work correctly. This is done by setting the stylesheet to an empty string
-```cpp
-DockManager->setStyleSheet("");
-```
+> [!WARNING]  
+> Be careful when using BreezeStyleSheets together with the [Qt Advanced Docking System](https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System). The dock managers internal stylesheet has to be disabled for BreezeStyleSheets to work correctly. This is done by setting the stylesheet to an empty string
+> ```cpp
+> DockManager->setStyleSheet("");
+> ```
