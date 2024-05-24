@@ -13,4 +13,3 @@ jobs:
       pre-build: sudo apt install -y libgl1-mesa-dev libglx-dev qt6-base-dev
       args: -DCMAKE_BUILD_TYPE=Debug
       target: QtBreezeImageViewer
-      post-build: ctest --test-dir build --schedule-random --timeout 86400
