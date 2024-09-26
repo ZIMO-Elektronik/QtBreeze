@@ -4,7 +4,7 @@ include(FetchContent)
 FetchContent_Declare(
   CMakeModules
   GIT_REPOSITORY "https://github.com/ZIMO-Elektronik/CMakeModules"
-  GIT_TAG v0.9.1)
+  GIT_TAG v0.9.2)
 FetchContent_MakeAvailable(CMakeModules)
 
 version_from_git()
@@ -63,7 +63,7 @@ execute_process(
 if(PROJECT_IS_TOP_LEVEL)
   file(
     DOWNLOAD
-    "https://github.com/ZIMO-Elektronik/.clang-format/raw/master/.clang-format"
+    "https://github.com/ZIMO-Elektronik/.github/raw/master/data/.clang-format"
     ${CMAKE_CURRENT_LIST_DIR}/.clang-format)
   file(GLOB_RECURSE SRC examples/*.*pp)
   add_clang_format_target(QtBreezeFormat OPTIONS -i FILES ${SRC})

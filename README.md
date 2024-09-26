@@ -7,9 +7,9 @@
 QtBreeze is a CMake wrapper for KDE's [breeze-icons](https://github.com/KDE/breeze-icons) and [BreezeStyleSheets](https://github.com/Alexhuszagh/BreezeStyleSheets). It combines both repositories into two seperate [Qt resource files](https://doc.qt.io/qt-5/resources.html#resource-collection-files-op-op-qrc), which can then be easily included in other Qt projects.
 
 <details>
-  <summary>Table of contents</summary>
+  <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -19,7 +19,7 @@ QtBreeze is a CMake wrapper for KDE's [breeze-icons](https://github.com/KDE/bree
   </ol>
 </details>
 
-## Getting started
+## Getting Started
 ### Prerequisites
 - C++17 compatible compiler
 - [CMake](https://cmake.org/) ( >= 3.25 )
