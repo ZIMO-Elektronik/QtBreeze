@@ -4,7 +4,7 @@ include(FetchContent)
 FetchContent_Declare(
   CMakeModules
   GIT_REPOSITORY "https://github.com/ZIMO-Elektronik/CMakeModules"
-  GIT_TAG v0.9.2)
+  GIT_TAG v0.9.3)
 FetchContent_MakeAvailable(CMakeModules)
 
 version_from_git()
@@ -61,11 +61,11 @@ execute_process(
   WORKING_DIRECTORY ${BreezeStyleSheets_SOURCE_DIR})
 
 if(PROJECT_IS_TOP_LEVEL)
+  add_subdirectory(examples)
   file(
     DOWNLOAD
     "https://github.com/ZIMO-Elektronik/.github/raw/master/data/.clang-format"
     ${CMAKE_CURRENT_LIST_DIR}/.clang-format)
   file(GLOB_RECURSE SRC examples/*.*pp)
   add_clang_format_target(QtBreezeFormat OPTIONS -i FILES ${SRC})
-  add_subdirectory(examples)
 endif()
