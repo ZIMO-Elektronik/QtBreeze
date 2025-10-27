@@ -4,6 +4,7 @@ add_executable(QtBreezeImageViewer ${SRC})
 target_compile_features(QtBreezeImageViewer PUBLIC cxx_std_23)
 
 target_common_warnings(QtBreezeImageViewer PRIVATE)
+target_common_errors(QtBreezeImageViewer PRIVATE)
 
 find_qt(REQUIRED COMPONENTS Widgets)
 

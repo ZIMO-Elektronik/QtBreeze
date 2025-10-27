@@ -12,7 +12,7 @@ QMdiSubWindow* MdiArea::addSubWindow(QWidget* widget,
   retval->setObjectName(widget->objectName());
   removeQtIcon(retval);
   retval->show();
-  retval->setStyleSheet(qApp->styleSheet());  // Why the fuck is this necessary?
+  retval->setStyleSheet(qApp->styleSheet()); // Why the fuck is this necessary?
   return retval;
 }
 
